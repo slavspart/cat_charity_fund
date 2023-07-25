@@ -1,12 +1,13 @@
 from datetime import datetime
 from typing import Optional
+
 from pydantic import Field
 
 from app.schemas.base import ProjectDonationSchemaBase, ProjectDonationSchemaDB
 
 
 class DonationBase(ProjectDonationSchemaBase):
-    comment: Optional[str] = Field(None, min_length=1, example='comment')
+    comment: Optional[str] = Field(None, min_length=1, example="comment")
 
 
 class DonationCreate(DonationBase):

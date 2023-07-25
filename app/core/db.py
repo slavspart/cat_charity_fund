@@ -8,14 +8,13 @@ from app.core.config import settings
 
 
 class PreBase:
+    # each model will have id field
+    id = Column(Integer, primary_key=True)
 
     @declared_attr
     def __tablename__(cls):
         # Each table will have name as the name of model
         return cls.__name__.lower()
-
-    #each model will have id field
-    id = Column(Integer, primary_key=True)
 
     def close(self):
         print(self, self.full_amount, self.invested_amount)
