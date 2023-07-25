@@ -1,5 +1,7 @@
 [flake8]
 ignore = E501, E265, F811, PT001, DJ05, D100, D105, D104, W503, W504, W292
+# added W503 to ignore because black considers it to contradict PEP8
+# https://black.readthedocs.io/en/stable/faq.html#why-are-flake8-s-e203-and-w503-violated
 max-line-length = 79
 paths = 
     ./app
