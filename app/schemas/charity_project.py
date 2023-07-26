@@ -15,9 +15,9 @@ class CharityProjectBase(ProjectDonationSchemaBase):
     @root_validator
     def check_fields(cls, values):
         if (
-            "full_amount" not in values
-            or "name" not in values
-            or "description" not in values
+            "full_amount" not in values or
+            "name" not in values or
+            "description" not in values
         ):
             raise HTTPException(
                 status_code=HTTPStatus.UNPROCESSABLE_ENTITY,
@@ -38,9 +38,9 @@ class CharityProjectUpdate(BaseModel):
     @root_validator
     def check_fields(cls, values):
         if (
-            "full_amount" not in values
-            and "name" not in values
-            and "description" not in values
+            "full_amount" not in values and
+            "name" not in values and
+            "description" not in values
         ):
             raise HTTPException(
                 status_code=HTTPStatus.UNPROCESSABLE_ENTITY,

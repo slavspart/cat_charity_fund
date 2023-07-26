@@ -21,8 +21,8 @@ class CRUDCharityProject(CRUDBase):
         if unused_donations is not None:
             for donation in unused_donations:
                 while (
-                    project.full_amount > project.invested_amount
-                    and donation.full_amount > donation.invested_amount
+                    project.full_amount > project.invested_amount and
+                    donation.full_amount > donation.invested_amount
                 ):
                     to_invest = project.full_amount - project.invested_amount
                     # amount needed to accomplish project

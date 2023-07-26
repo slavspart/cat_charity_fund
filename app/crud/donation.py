@@ -20,8 +20,8 @@ class CRUDDonation(CRUDBase):
         if fnc is not None:
             for project in fnc:
                 while (
-                    donation.full_amount > donation.invested_amount
-                    and project.full_amount > project.invested_amount
+                    donation.full_amount > donation.invested_amount and
+                    project.full_amount > project.invested_amount
                 ):
                     print(
                         "d",
